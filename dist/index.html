@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <title>test Vyacheslav</title>
+
+    <link rel="preload" href="./fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/inter-regular.woff" as="font" type="font/woff" crossorigin>
+
+    <link rel="stylesheet" href="./styles/styles.min.css">
+
+    <script defer src="./js/scripts.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a class="header-logo" href="#">
+                Сократика
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="form">
+            <div class="container form-container">
+                <img class="form-img" src="./img/dist/main-bg.webp" alt="Картинка человек за компьютером">
+                <div class="form-wrap">
+                    <h2 class="form-wrap__title h2">
+                        01 Заполни форму
+                    </h2>
+                    <form class="form-inner">
+                        <div class="form-row">
+                            <fieldset class="form-row-inner fieldset-theme">
+                                <legend class="form-row-inner__title">
+                                    Тема урока
+                                </legend>
+                                <input type="text" class="form-row-inner__theme inputs" name="theme" placeholder="Напиши что-то конкретное">
+                                <button class="form-row-inner__button"></button>
+                            </fieldset>
+                            <fieldset class="form-row-inner fieldset-class">
+                                <legend class="form-row-inner__title">
+                                    Класс
+                                </legend>
+                                <input class="form-row-inner__class inputs" type="text" name="class" value="1" readonly>
+                                <ul class="class-list">
+                                    <li class="class-list-item">1</li>
+                                    <li class="class-list-item">2</li>
+                                    <li class="class-list-item">3</li>
+                                    <li class="class-list-item">4</li>
+                                    <li class="class-list-item">5</li>
+                                    <li class="class-list-item">6</li>
+                                    <li class="class-list-item">7</li>
+                                    <li class="class-list-item">8</li>
+                                    <li class="class-list-item">9</li>
+                                    <li class="class-list-item">10</li>
+                                    <li class="class-list-item">11</li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <div class="form-row">
+                            <ul class="variant-list">
+                                <li class="variant-list-item">
+                                    Генетика
+                                </li>
+                                <li class="variant-list-item">
+                                    Анатомия человека
+                                </li>
+                                <li class="variant-list-item">
+                                    Вулканы
+                                </li>
+                                <li class="variant-list-item">
+                                    Зимние виды спорта
+                                </li>
+                                <li class="variant-list-item">
+                                    Индийская культура
+                                </li>
+                                <li class="variant-list-item">
+                                    Радуга
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Пеший туризм
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Философия
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Вселенная
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Здоровые привычки
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Бабочки
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Белые медведи
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Экономика
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Финансовая грамотность
+                                </li>
+                                <li class="variant-list-item disabled">
+                                    Фотосинтез
+                                </li>
+                            </ul>
+                            <button class="variant-button">
+                                + Показать больше вариантов
+                            </button>
+                        </div>
+                        <div class="form-row">
+                            <fieldset class="form-row-inner fieldset-target">
+                                <legend class="form-row-inner__title">
+                                    Цель урока
+                                </legend>
+                                <textarea class="form-row-inner__text inputs" name="target" id="target" placeholder="Напиши свою учебную цель" rows="4"></textarea>
+                            </fieldset>
+                            <span class="form-row-numbers">
+                                <span class="form-row-numbers__number">
+                                    0
+                                </span>
+                                / 200
+                            </span>
+                        </div>
+                        <div class="form-inner-buttons">
+                            <button class="form-inner-buttons__prev button">
+                                Назад
+                            </button>
+                            <button class="form-inner-buttons__next button disabled-btn" disabled>
+                                Следующий шаг
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

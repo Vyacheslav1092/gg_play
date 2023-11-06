@@ -1,0 +1,354 @@
+.header {
+    padding: 60px 0;
+
+    @media (max-width: 940px) {
+        padding: 30px 0;
+    }
+
+    @media (max-width: 500px) {
+        padding: 20px;
+    }
+
+    &-container {
+        @media (max-width: 500px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &-logo {
+        display: inline-flex;
+        align-items: center;
+        padding-left: 50px;
+        height: 40px;
+        @extend %font-500;
+        font-size: 28px;
+        font-weight: 800;
+        background-image: url('#{$url}/img/dist/main-logo.svg');
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media (max-width: 500px) {
+            padding-left: 40px;
+            height: 32px;
+            font-size: 24px;
+        }
+    }
+}
+
+.form {
+    padding-bottom: 40px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: 940px) {
+        justify-content: center;
+    }
+}
+
+.form-img {
+    width: 50%;
+    max-width: 660px;
+
+    @media (max-width: 940px) {
+        display: none;
+    }
+}
+
+.form-wrap {
+    width: 50%;
+    max-width: 800px;
+
+    @media (max-width: 940px) {
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+
+        @media (max-width: 940px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 500px) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.inputs {
+    padding: 10px 0 15px 0;
+    width: 100%;
+    @extend %font-400;
+    font-size: 18px;
+    line-height: 1.1;
+    color: $text-color;
+
+    @media (max-width: 500px) {
+        font-size: 14px;
+    }
+
+    &::placeholder {
+        @extend %font-400;
+        font-size: 18px;
+        line-height: 1.1;
+        color: $placeholder-color;
+
+        @media (max-width: 500px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.form-row {
+    &:first-child {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+
+    }
+
+    &:nth-child(2) {
+        margin-bottom: 50px;
+
+        @media (max-width: 500px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    &-inner {
+        position: relative;
+        margin: 0;
+        padding: 0 50px 0 15px;
+        border-radius: 10px;
+        border-color: $border-grey;
+        transition: border-color .3s ease-in-out;
+
+        @media (max-width: 500px) {
+            padding-right: 35px;
+        }
+
+        &__title {
+            @extend %font-400;
+            font-size: 16px;
+            line-height: 1.1;
+            color: $text-color;
+            transition: color .3s ease-in-out;
+        }
+
+        &__button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            border: 1.25px solid $text-color;
+            width: 16px;
+            height: 17px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                border-radius: 6px;
+                width: 6px;
+                height: 1px;
+                background-color: $text-color;
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+
+        &__text {
+            margin: 0;
+            resize: none;
+        }
+
+        &__class {
+            cursor: pointer;
+        }
+    }
+
+    &-numbers {
+        margin-left: auto;
+        margin-right: 15px;
+        @extend %font-400;
+        font-size: 14px;
+        line-height: 21px;
+        color: $text-color;
+    }
+}
+
+.fieldset-theme {
+    width: 80%;
+    max-width: 665px;
+}
+
+.fieldset-class {
+    padding-right: 15px;
+    width: 20%;
+    max-width: 120px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 14px;
+        right: 15px;
+        border-left: 1.25px solid $text-color;
+        border-bottom: 1.25px solid $text-color;
+        width: 10px;
+        height: 9px;
+        transform: rotate(-45deg);
+    }
+}
+
+.class-list {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: none;
+    border-radius: 12px;
+    border: 1.25px solid $border-grey;
+    width: 100%;
+    max-height: 200px;
+    background-color: $white;
+    overflow-y: scroll;
+
+    &-item {
+        position: relative;
+        padding: 10px 15px;
+        @extend %font-400;
+        font-size: 18px;
+        color: $text-color;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 14px;
+            right: 15px;
+            border-left: 1.25px solid $text-color;
+            border-bottom: 1.25px solid $text-color;
+            width: 11px;
+            height: 6px;
+            transform: rotate(-45deg);
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+
+        &:hover {
+            font-weight: 600;
+        }
+    }
+}
+
+.class-list-active {
+    display: block;
+}
+
+.class-item-selected {
+    font-weight: 600;
+
+    &::before {
+        opacity: 1;
+    }
+}
+
+.variant-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    &-item {
+        border-radius: 100px;
+        padding: 10px 15px;
+        @extend %font-500;
+        font-size: 16px;
+        line-height: 1;
+        color: $text-color;
+        background-color: $item-bg;
+
+        @media (max-width: 500px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.disabled {
+    display: none;
+}
+
+.variant-button {
+    @extend %font-500;
+    font-size: 18px;
+    line-height: 1.1;
+    color: $more-color;
+
+    @media (max-width: 500px) {
+        font-size: 16px;
+    }
+}
+
+.fieldset-target {
+    padding-right: 20px;
+}
+
+.form-inner-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.field-active {
+    border-color: $more-color;
+
+    .form-row-inner__title {
+        color: $more-color;
+    }
+
+    &::after {
+        transform: rotate(140deg);
+    }
+}
+
+.btn-active {
+    opacity: 1;
+    z-index: 0;
+}
+
+.max-length {
+    .fieldset-target {
+        border-color: $err;
+    }
+
+    .form-row-inner__title {
+        color: $err;
+    }
+
+    .form-row-numbers {
+        color: $err;
+    }
+}

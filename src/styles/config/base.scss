@@ -1,0 +1,133 @@
+$url: "./..";
+
+// colors  -----------------------------------
+$white: #ffffff;
+$text-color: #343434;
+$placeholder-color: #9a9a9a;
+$item-bg: #EEEFF0;
+$more-color: #3CA9F0;
+$main-bg: #fdfeff;
+$border-grey: #eaeaea;
+$err: #EF5579;
+
+
+// fonts -------------------------------------
+
+%font-400 {
+  font-family: "Inter-400", sans-serif;
+  font-weight: 400;
+}
+
+%font-500 {
+  font-family: "Inter-500", sans-serif;
+  font-weight: 500;
+}
+
+// typography --------------------------------
+.h1 {
+//   @extend %font-500;
+  font-size: 50px;
+  line-height: 50px;
+
+  @media (max-width: 1439px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (max-width: 891px) {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+
+  @media (max-width: 664px) {
+    font-size: 18px;
+  }
+}
+
+.h2 {
+  @extend %font-500;
+  font-size: 48px;
+  line-height: 1.1;
+
+  @media (max-width: 940px) {
+    font-size: 38px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 28px;
+  }
+}
+
+.h3 {
+//   @extend %font-600;
+  font-size: 20px;
+  line-height: 30px;
+
+  // @media (max-width: 1440px) {
+  //   font-size: 22px;
+  //   line-height: 28px;
+  // }
+
+  // @media (max-width: 575px) {
+  //   font-size: 18px;
+  //   line-height: 26px;
+  // }
+}
+
+// main element styles -----------------------
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  @extend %font-400;
+  font-size: 16px;
+  line-height: 1.1;
+  color: $text-color;
+  background-color: $main-bg;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1640px;
+}
+
+.button {
+    border-radius: 12px;
+    border: 1px solid $more-color;
+    padding: 18px 50px;
+    height: 58px;
+    @extend %font-500;
+    font-size: 18px;
+    line-height: 1.1;
+    color: $more-color;
+    transition: border-color .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+    @media (max-width: 500px) {
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+}
+
+.disabled-btn {
+    border-color: $item-bg;
+    color: $placeholder-color;
+    background-color: $item-bg;
+}
+
+.active-btn {
+    border-color: $more-color;
+    color: $white;
+    background-color: $more-color;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+}
